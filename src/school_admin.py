@@ -56,7 +56,6 @@ class Aula:
         for time, course_name in self.occupazione_aula.items():
             print(f"    {time}: {course_name}")
 
-# --- Andrea's Utility Suite ---
 class UtilitySuite:
     @staticmethod
     def controlla_sedie(aula: Aula, numero_alunni_previsti: int) -> int:
@@ -69,7 +68,6 @@ class UtilitySuite:
         print(f"Utility: Checking chairs for classroom '{aula.nome_aula}'. Needed: {numero_alunni_previsti}, Available: {aula.capacita_sedie}")
         return sedie_mancanti
     
-# --- Ivan's Class: Segreteria ---
 class Segreteria(Persona):
     def __init__(self, name, last_name, date_of_birth):
         super().__init__(name, last_name, date_of_birth)
@@ -78,7 +76,6 @@ class Segreteria(Persona):
         self.all_aula_schedules = {} # To store calendars of all aulas for printing (Jay's usage)
         print(f"Secretariat user '{self.name} {self.last_name}' initialized.")
 
-    # --- Emilian's method ---
     def creazione_calendario(self, aula: Aula, corso: Corso, time_slot: str):
         """
         Emilian's method: Creates or updates the calendar for a specific classroom and course.
@@ -90,8 +87,6 @@ class Segreteria(Persona):
         self.all_aula_schedules[aula.nome_aula] = aula.occupazione_aula
         print(f"✅ Schedule for '{aula.nome_aula}' at '{time_slot}' set to '{corso.nome_corso}'.")
 
-
-    # --- Enrico's method ---
     def creazione_classe(self, corso: Corso, students_to_assign: list):
         """
         Enrico's method: Populates the student list for a given course.
@@ -105,8 +100,6 @@ class Segreteria(Persona):
                 newly_assigned_count += 1
         print(f"✅ {newly_assigned_count} new students assigned to course '{corso.nome_corso}'.")
 
-
-    # --- Jay's method ---
     def stampa_calendario(self):
         """
         Jay's method: Prints the complete schedule of all classrooms to a single TXT file.
@@ -137,7 +130,6 @@ class Segreteria(Persona):
             print(f"✅ Calendar printed successfully to '{output_filename}'.")
         except IOError as e:
             print(f"❌ Error printing calendar to file: {e}")
-
 
     # --- Amin's method ---
     def controllo_forniture(self, aula: Aula, numero_alunni_previsti: int):
