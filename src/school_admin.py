@@ -9,7 +9,6 @@ class Persona:
         self.last_name = last_name
         self.date_of_birth = date_of_birth # Format 'YYYY-MM-DD'
 
-# --- Nathalie's Class: Alunni ---
 class Alunni(Persona):
     lista_alunni = [] # Class attribute to keep track of all students
 
@@ -23,7 +22,6 @@ class Alunni(Persona):
         print(f"  Student Name: {self.name} {self.last_name}")
         print(f"  Date of Birth: {self.date_of_birth}")
 
-# --- Alberto's Class: Corso ---
 class Corso:
     def __init__(self, nome_corso, durata, docente):
         self.nome_corso = nome_corso
@@ -40,7 +38,6 @@ class Corso:
         print(f"  Teacher: {self.docente.name if hasattr(self.docente, 'name') else self.docente}")
         print(f"  Number of Students: {len(self.alunni_frequentanti_il_tal_corso)}")
 
-# --- Matteo's Class: Aula ---
 class Aula:
     def __init__(self, nome_aula, capacita_sedie):
         self.nome_aula = nome_aula
