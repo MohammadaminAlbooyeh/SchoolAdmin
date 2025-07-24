@@ -1,3 +1,4 @@
+
 # Sistema di Gestione Scolastica 🏫
 
 Questa applicazione consente la gestione completa di una scuola tramite una interfaccia web realizzata con Streamlit.
@@ -9,8 +10,10 @@ Questa applicazione consente la gestione completa di una scuola tramite una inte
 - **Assegnazione Studenti ai Corsi**: iscrivi studenti ai corsi.
 - **Pianificazione Orari**: assegna corsi alle aule e agli orari.
 - **Controllo Forniture**: verifica la disponibilità di sedie e genera ordini.
-- **Calendario Scolastico**: visualizza e scarica il calendario delle lezioni.
-- **Salvataggio e Caricamento Dati**: persisti i dati in file JSON.
+- **Calendario Scolastico Interattivo**: visualizza il calendario delle lezioni tramite componente interattivo.
+- **Presenze Studenti**: registra e visualizza le presenze degli studenti ai corsi.
+- **Salvataggio e Caricamento Dati**: persistenza su database SQLite.
+
 
 ## Come avviare l'applicazione
 
@@ -20,18 +23,19 @@ Questa applicazione consente la gestione completa di una scuola tramite una inte
    ```
 2. Avvia Streamlit:
    ```bash
-   streamlit run management_school_con_UI.py
+   streamlit run src/school_admin_UI.py
    ```
+
 
 ## Requisiti
 - Python 3.8+
-- Streamlit
+- streamlit
 - pandas
-- openpyxl
-- matplotlib
+- streamlit-calendar
 
 ## Autori
 - Ivan, Nathalie, Alberto, Matteo, Andrea, Enrico, Emilian, Jay, Amin
 
+
 ## Note
-Assicurati di salvare i dati prima di uscire dall'applicazione!
+Tutti i dati vengono salvati automaticamente nel database. Puoi visualizzare e scaricare il calendario scolastico e gestire le presenze direttamente dall'applicazione.
